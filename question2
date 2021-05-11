@@ -1,0 +1,11 @@
+Hi Joanna,
+
+I'm Juanjo, one of the QA that is working over the search functionality at https://www.manomano.co.uk/. In order to be able to properly undestand the
+functionality I would like to send you some questions. Here they are:
+
+- When an user inputs one word for a search, wich kind of logic we want to apply?
+- When an user inputs more than one word for a search, wich kind of logic (OR, AND) we want to apply?
+- What is the minimum input length for a search?
+- When showing results, do we need to follow some kind of order?
+- When making a search, against wich object's parameters do we need to check that input?
+- How many products per page results are we going to show to user?

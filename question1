@@ -1,0 +1,70 @@
+Scenario: Empty search
+Given I am at 'https://www.manomano.co.uk/' site
+When I click Search button
+Then nothing happens
+
+
+Scenario: Non existing search
+Given I am at 'https://www.manomano.co.uk/' site
+When I put '<input>' at search input
+And I click Search button
+Then 'no products found' will be showed as a result
+
+Example:
+|input       |
+|nonexisting |
+
+
+Scenario: Brand search
+Given I am at 'https://www.manomano.co.uk/' site
+When a put '<brand>' at search input
+And I click Search button
+Then '<brand>' products will be showed as a result
+
+Example:
+|brand |
+|Ford  |
+
+
+Scenario: Product search
+Given I am at 'https://www.manomano.co.uk/' site
+When I put '<product>' at search input
+And I click Search button
+Then '<product>' products will be showed as a result
+
+Example:
+|product |
+|Fork    |
+
+
+Scenario: Product and Brand search
+Given I am at 'https://www.manomano.co.uk/' site
+When I put '<product>' at search input
+And I put '<input>' at search input
+And I click Search button
+Then '<product>' or '<brand>' products will be showed as a result
+
+Example:
+|product |brand        |
+|Trowel  |Marshalltown |
+
+
+Scenario: Pagination at search
+Given I am at 'https://www.manomano.co.uk/' site
+And I know there is '<quantity>' '<products>' at database 
+When I put '<product>' at search input
+And I click Search button
+Then '<quantity> products found' will be showed as a result
+And '60 products out of <quantity>' will be showed as a result
+And I will be at first page
+
+When I move to next page
+Then '120 products out of <quantity>' will be showed as a result
+And I will be at second page
+
+When I move to '<pagination>' page
+Then '<quantity> products out of <quantity>' will be showed as a result
+
+Example:
+|product |quantity |pagination |
+|Trowel  |338      |6          |

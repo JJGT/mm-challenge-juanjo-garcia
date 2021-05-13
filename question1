@@ -51,11 +51,11 @@ Example:
 
 Scenario: Pagination at search
 Given I am at 'https://www.manomano.co.uk/' site
-And I know there is '<quantity>' '<products>' at database 
+And I know there is '<quantity>' '<product>' at database 
 When I put '<product>' at search input
 And I click Search button
-Then '<quantity> products found' will be showed as a result
-And '60 products out of <quantity>' will be showed as a result
+Then '<quantity>' products found will be showed as a result
+And 60 products out of '<quantity>' will be showed as a result
 And I will be at first page
 
 When I move to next page
@@ -63,7 +63,7 @@ Then '120 products out of <quantity>' will be showed as a result
 And I will be at second page
 
 When I move to '<pagination>' page
-Then '<quantity> products out of <quantity>' will be showed as a result
+Then '<quantity>' products out of '<quantity>' will be showed as a result
 
 Example:
 |product |quantity |pagination |

@@ -1,0 +1,6 @@
+Taking a look to the picture I can think of:
+
+- Unit Test to cover every piece of code. Ideally we should have a 100% line coverage with Unit Tests. This will affect to BACKEND, FRONTEND.
+- E2E Tests over the most popular browsers and mobile phones (FRONTEND).
+- Performance Tests over BACKEND and DB.
+- Integration Tests with any THIRD PARTY we use (BACKEND).

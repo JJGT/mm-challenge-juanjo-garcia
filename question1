@@ -40,7 +40,7 @@ Example:
 Scenario: Product and Brand search
 Given I am at 'https://www.manomano.co.uk/' site
 When I put '<product>' at search input
-And I put '<input>' at search input
+And I put '<brand>' at search input
 And I click Search button
 Then '<product>' or '<brand>' products will be showed as a result
 
